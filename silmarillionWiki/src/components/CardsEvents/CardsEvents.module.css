@@ -1,0 +1,75 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;  
+}
+
+.LabelCard {
+    width: 80px;
+    border-radius: .75rem;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28, -0.03, 0, .99);
+    box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
+}
+
+.IconCard {
+    opacity: 0.5;
+}
+
+.LabelCard > .RowCard {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.LabelCard > .RowCard > .IconCard {
+    background: #223;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.LabelCard > .RowCard > .DescCard {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 120px;
+    width: 510px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3 ease;
+}
+
+.DescCard p {
+    color: #b0b0ba;
+    padding: 5px;
+}
+
+.DescCard h4 {
+    text-transform: uppercase;
+}
+
+.InputCard {
+    display: none;
+}
+
+.InputCard:checked + label{
+    width: 600px;
+}
+
+.InputCard:checked + label .DescCard {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
